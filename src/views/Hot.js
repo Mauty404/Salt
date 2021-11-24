@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import {
   Pressable,
   Text,
@@ -9,28 +9,38 @@ import {
   Flex,
   Center,
   NativeBaseProvider,
+  Container,
+  Button
 } from "native-base"
-export default function AddsList({title, subtitle}) {
+export default function Hot({navigation}) {
+
   return (
+    <View style={styles.view}>
       <Box style={styles.container} p="5" rounded="none" bg="cyan.700">
         <HStack>
-        <Text style={styles.text}>
-          {title}
-        </Text>
+          <Text style={styles.text}>
+            Hot
+          </Text>
         </HStack>
         <HStack>
-        <Text style={styles.text}>
-          {subtitle}
-        </Text>
+          <Text style={styles.text}>
+            test
+          </Text>
         </HStack>
       </Box>
+    </View>
+      
   )
 }
 const styles = StyleSheet.create({
+  view: {
+    backgroundColor: '#1A1D24',
+    flex: 1
+  },
   container: {
-    flexDirection: "row",
+    flexDirection: "column",
     width: '100%',
-    marginBottom: 5
+    margin: 7
   },
   text: {
     color: 'white'
